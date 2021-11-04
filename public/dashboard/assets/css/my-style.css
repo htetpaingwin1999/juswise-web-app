@@ -1,0 +1,260 @@
+.full-screen{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2006;
+    height: 100%;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+} */
+
+body{
+    overflow: hidden;
+}
+:root{
+    --primary-soft:#f3f3f3;
+}
+.nav-link{
+    font-size: 15px!important;
+}
+.nav-active{
+    color: #5f004f;
+}
+.breadcrumb a{
+    text-decoration: none;
+}
+
+.content{
+    background-color: var(--primary-soft);
+    overflow: scroll;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) inset;
+}
+
+.box{
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}
+
+/* =============== Header =============== */
+.header{
+    position: sticky;
+    top: 3px;
+    z-index: 2000;
+    border-radius: 5px;
+}
+.card-status{
+    transition: 0.5s;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-btn:focus{
+    box-shadow: none !important;
+}
+
+/* ================ Sidebar ================= */
+.sidebar{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.sub-menu li a:hover{
+    background: #dddfeb;
+    border-radius: 5px;
+}
+
+.nav-item ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.sub-home{
+    font-size: 17px !important;
+    color: #555
+}
+
+.sub-label{
+    font-size: 17px !important
+}
+
+.sub-menu li a{
+    transition: 0.5s;
+    color: #555 !important;
+}
+
+.menu-title{
+    padding: 10px 0px;
+}
+.menu-item-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* ============= Responsive Class ============= */
+@media screen and (max-width: 780px){
+     .sidebar1{
+        position: fixed;
+        width: 300px;
+        z-index: 2010;
+        display: block !important;
+        background-color: var(--primary-soft);
+        margin-left: -100%;
+      
+        
+     }
+}
+@media screen and (max-width: 420px){
+    .sidebar1{
+       position: fixed;
+       width: 200px;
+       z-index: 2010;
+       display: block !important;
+       background-color: var(--primary-soft);
+       margin-left: -100%;
+     
+       
+    }
+    .forph{
+        margin-top: 100px;
+    }
+}
+
+/* =================== Create Case Form ================ */
+label{
+    margin-bottom: 5px;
+}
+
+h1{
+    text-align: center;
+    color: #5f004f;
+}
+
+
+.create-case-form, textarea {
+    width: 70%;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+    border: none;
+    background: rgb(217, 231, 253);
+}
+
+
+.create-case-form:focus, textarea:focus {
+    background-color: rgb(201, 237, 252);
+    outline: none;
+}
+.div-text {
+    width: 100%;
+    margin-top: 6px;
+}
+textarea{
+    border-radius: 5px;
+    border: 2px white;
+}
+
+.btn-form {
+    background-color: #610f53;
+    color: white;
+    padding: 16px 20px;
+    margin: 5px 40px 0px 0px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity:3;
+}
+.form-left{
+    margin-left: 120px;
+}
+.form-left1{
+    margin-left: 0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mainDiv {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    /*!*background-color: #f9f9f9;*!*/
+
+}
+.cardStyle {
+    width: 500px;
+    border-color: white;
+    background: #fff;
+    padding: 36px 0;
+    border-radius: 4px;
+    margin: 30px 0;
+    box-shadow: 0px 0 2px 0 rgba(0,0,0,0.25);
+}
+.signupLogo {
+    max-height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.formTitle{
+    font-weight: 600;
+    margin-top: 20px;
+    color: #2F2D3B;
+    text-align: center;
+}
+.inputLabel {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
+    margin-top: 24px;
+}
+.inputDiv {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+input {
+    height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px #ccc;
+    padding: 0 11px;
+}
+
+.buttonWrapper {
+    margin-top: 40px;
+}
+.submitButton {
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    font-size: 14px;
+
+}
+
+
+
+
+
+
+

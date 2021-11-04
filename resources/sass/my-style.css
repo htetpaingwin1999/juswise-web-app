@@ -1,0 +1,174 @@
+.full-screen{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2006;
+    height: 100%;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+} */
+
+body{
+    overflow: hidden;
+}
+:root{
+    --primary-soft:#f3f3f3;
+}
+.nav-link{
+    font-size: 15px!important;
+}
+.nav-active{
+    color: #5f004f;
+}
+.breadcrumb a{
+    text-decoration: none;
+}
+
+.content{
+    background-color: var(--primary-soft);
+    overflow: scroll;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) inset;
+}
+
+.box{
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}
+
+/* =============== Header =============== */
+.header{
+    position: sticky;
+    top: 3px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+.card-status{
+    transition: 0.5s;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-btn:focus{
+    box-shadow: none !important;
+}
+
+/* ================ Sidebar ================= */
+.sidebar{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.sub-menu li a:hover{
+    background: #dddfeb;
+    border-radius: 5px;
+    color: #555;
+}
+
+.nav-item ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.sub-home{
+    font-size: 17px !important;
+    color: #555
+}
+
+.sub-label{
+    font-size: 18px !important;
+    color: #555;
+    font-weight: bold;
+}
+
+.sub-menu li a{
+    transition: 0.5s;
+    color: #000;
+    /* color: black; */
+}
+
+
+.menu-title{
+    padding: 10px 0px;
+}
+.menu-item-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* ============= Responsive Class ============= */
+@media screen and (max-width: 780px){
+     .sidebar1{
+        position: fixed;
+        width: 300px;
+        z-index: 2010;
+        display: block !important;
+        background-color: var(--primary-soft);
+        margin-left: -100%;
+      
+        
+     }
+}
+@media screen and (max-width: 420px){
+    .sidebar1{
+       position: fixed;
+       width: 200px;
+       z-index: 2010;
+       display: block !important;
+       background-color: var(--primary-soft);
+       margin-left: -100%;
+     
+       
+    }
+    .forph{
+        margin-top: 100px;
+    }
+}
+
+/* =================== Custom Form Class ================ */
+.case-card label {
+  font-weight: bold;
+  font-size: 17px !important;
+}
+
+
+/* =================== Custom Form Class ================ */
+.form-control-user, .btn-user{
+    border-radius: 25px !important;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.table td, .table th{
+    vertical-align: middle !important;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+

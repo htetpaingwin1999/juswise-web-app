@@ -1,0 +1,21 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&family=Padauk:wght@400;700&display=swap');
+
+$primary: #5f004f;
+
+.active-item{
+    background-color: $primary !important;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+$font-family-sans-serif: 'Lato', 'Padauk', sans-serif;
+$swal2-confirm-button-background-color: $primary;
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import 'feather-icons-web/feather.css';
+@import "~sweetalert2/src/sweetalert2.scss";
+@import 'my-style.css';
