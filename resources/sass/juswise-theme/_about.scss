@@ -1,0 +1,93 @@
+.about-page-bg{
+  // background-image: url("../../../public/juswise-theme/img/Who-We-Are.jpg");
+  background-size: cover;
+ background-repeat: no-repeat;
+  // filter:drop-shadow(20px 8px 10px orange);
+  z-index: -1;
+
+ 
+
+}
+.about-line-img{
+  line-height: 80px;
+}
+.about-page-2{
+  margin-top: -10px !important;
+}
+.nav-underline{
+  text-decoration-color: cadetblue!important;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+    .bg-blur::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      position: absolute;
+      // background-color: red;
+      backdrop-filter: blur(25px);
+      opacity: 0.3;
+      z-index: -2;
+
+    }
+.about-middle-text{
+  margin-top: 50px!important;
+}
+.navbar-toggler:focus{
+  box-shadow: none!important;
+}
+.about-hover-img{
+  width: 500px;
+  height: 300px;
+}
+.card figcaption{
+  background: rgb(37, 194, 160)!important;
+} 
+@media screen and (max-width:480px){
+  .nav-item{
+    border: 1px solid beige!important;
+    border-radius: 10px!important;
+    margin-top: 6px!important;
+    background-color: #FAFAFA!important;
+  }
+  .nav-link{
+    padding: 15px 10px!important;
+    //background-color: #0dcaf0!important;
+  }
+  .about-page-bg{
+    // width: 100%;
+    // height: 100%!important;
+    background-size:cover;
+    margin-top: 160px;
+  }
+
+  .about-page-2{
+    margin-top: -67px!important;
+  }
+  .about-middle-text{
+    margin-top: 0px!important;
+  }
+  .team-member{
+    margin-top: 0px!important;
+  }
+  .main-cap-ph{
+   margin-top: -200px!important;
+  }
+}
+@media screen and (max-width:780px){
+  .about-middle-text{
+    margin-top: 10px!important;
+  }
+  .nav-item{
+    border: 1px solid beige!important;
+    border-radius: 10px!important;
+    margin-top: 6px!important;
+    background-color: #FAFAFA!important;
+  }
+  .nav-link{
+    padding: 15px 10px!important;
+    //background-color: #0dcaf0!important;
+  }
+}

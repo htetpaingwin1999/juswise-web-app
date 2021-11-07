@@ -1,0 +1,26 @@
+p{
+  font-family: 'Hina Mincho', serif;
+}
+h3{
+  font-family: 'Rampart One' ;
+}
+.empower{
+  border: 1 solid #7A0A4F;
+  background: #7A0A4F;
+  border-radius: 5px;
+}
+  
+@media screen and (max-width:480px){
+  #myChart
+  {
+    position: relative;
+    left: -103px !important;
+    width: 478px !important;
+    height: 236px !important;
+  }
+}
+.detail-bg{
+  // background-image: url("../Data/photo/donate-us.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

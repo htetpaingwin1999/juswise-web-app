@@ -3,11 +3,11 @@
 @section("title") {{ $problem->title }} @endsection
 
 @section('theme')
-    <style>
-        .case-detail .title{
-            line-height: 45px;
-        }
-    </style>
+<style>
+    .case-detail .title {
+        line-height: 45px;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-               <div class="card-body case-detail my-3">
+                <div class="card-body case-detail my-3">
                     <h4 class="title">{{ $problem->title }}</h4>
                     <hr class="text-primary">
 
@@ -68,7 +68,7 @@
                         <h4 class="fw-bold text-primary">Related Cases & Documents</h4>
                         <p class="mt-2 fs-5">{{ $problem->related_case }}</p>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     </div>

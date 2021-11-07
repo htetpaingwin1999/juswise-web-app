@@ -54,11 +54,13 @@ class ProblemController extends Controller
             "related_case" => "required|min:5"
         ]);
 
+
         $case = new Problem();
         $case->title = $request->title;
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;
         $case->allegation = $request->allegation;
+        // $case->decision_date = date("j F Y", strtotime($request->decision_date));
         $case->decision_date = $request->decision_date;
         $case->case_summary = $request->case_summary;
         $case->decision = $request->decision;
@@ -120,6 +122,7 @@ class ProblemController extends Controller
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;
         $case->allegation = $request->allegation;
+        // $case->decision_date = date("j F Y", strtotime($request->decision_date));
         $case->decision_date = $request->decision_date;
         $case->case_summary = $request->case_summary;
         $case->decision = $request->decision;

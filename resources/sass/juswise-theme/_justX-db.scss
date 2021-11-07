@@ -1,0 +1,228 @@
+body{
+  transition: 1s!important;
+}
+.jusX-Db-bg{
+  // background-image: url("../Data/photo/jusx-database.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.jusx-hero {
+  position: relative;
+  bottom: -25px;
+
+  .custom-search-bar {
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px 15px;
+    height: 52px;
+    background: #ffffff;
+
+    input {
+      border: none !important;
+      padding: 7px 5px;
+      width: 70%;
+      font-size: 19px;
+
+      &:focus-visible {
+        outline: none !important;
+      }
+    }
+  }
+  
+
+  .btn-search {
+    // background: rgb(151, 29, 29);
+    border: none !important;
+    border-radius: 0 !important;
+    height: 52px !important;
+    padding: 0 30px;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    &:focus{
+      box-shadow: none!important;
+      
+      }
+  }
+  .btn-engine{
+    
+    border-radius: 0 !important;
+    height: 52px !important;
+    padding: 0 30px;
+    &:focus{
+      box-shadow: none!important;
+      
+      }
+    
+  }
+}
+.mode-chg{
+  width: 45px;
+height: 47px;
+border: 2px;
+background-color: gray;
+border-radius: 27%;
+position: fixed;
+bottom: 19px;
+right: 14px;
+outline: none;
+cursor: pointer;
+}
+.dark-mode{
+  background-color: #444444;
+  transition: 1s;
+}
+.dark-mode p,.dark-mode hr,.dark-mode h2,.dark-mode .fas,.dark-mode ol,.dark-mode h4 {
+  color: #fafafa;
+}
+
+@media screen and (max-width: 480px) {
+  .btn-search {
+    padding: 0 20px !important;
+  }
+  .jusx-pdf{
+    margin-top: 0px!important;
+  }
+  .btn-back{
+    margin-top: 0px!important;
+  }
+}
+.jusx-search{
+  .jux-search-bg{
+    position: relative;
+    left: 250px;
+    background-color: #E8E8E8;
+    
+  }
+  .line{
+    height: 200px;
+    margin-left: 20px !important;
+  }
+  .close{
+   position: relative;
+   top: -20px;
+   left: 25px;
+   cursor: pointer;
+  }
+}
+@media screen and (max-width:480px){
+  .jux-search-bg{
+    position: relative;
+    margin-left: -30px!important;
+    top: 30px!important;
+    left: 50px!important;
+   background-color: #E8E8E8;
+    
+  }
+}
+@media screen and (max-width:780px){
+  .jux-search-bg{
+    position: relative;
+    top: 30px!important;
+    left: 10px!important;
+   background-color: #E8E8E8;
+    
+  }
+}
+.jusx-content {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  h3{
+    font-family: serif;
+  }
+  .custom-pagination{
+
+    .left-arrow{
+      a{
+        border-radius: 50% !important;
+        padding: 5px 10px !important;
+      }
+    }
+
+    .page-number{
+      margin: 0px 3px;
+
+      a{
+        border-radius: 5px !important;
+        color: #ffffff;
+        background: rgb(204, 204, 204);
+        transition: 0.5s;
+
+        &:hover{
+          background-color: #0dcaf0;
+        }
+
+        &:active{
+          background-color: #0dcaf0;
+        }
+      }
+    }
+
+    .right-arrow{
+      a{
+        border-radius: 50% !important;
+        padding: 5px 10px !important;
+      }
+    }
+  }
+  @media screen and (max-width:780px){
+    margin-top: 80px!important;
+  }
+}
+
+.jusx-details{
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  .line{
+    height: 2px;
+  }
+
+  .jusx-text{
+    p{
+      font-size: 20px;
+    }
+  }
+
+  .jusx-pdf{
+    h6{
+      font-size: 18px;
+    }
+
+    .btn-view{
+      background: #0dcaf0;
+      border-radius: 25px;
+    }
+  }
+
+  .btn-back{
+    padding: 8px 45px !important;
+    margin-top: 90px;
+  }
+
+  .custom-content{
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0px 15px 0px 15px !important;
+
+    .custom-header{
+      border-bottom: none !important;
+    }
+
+    .custom-footer{
+      border-top: none !important;
+    }
+
+    .star-rating{
+
+      span{
+        color:gray;
+      }
+        
+      .rate{
+        color: #7A0A4F!important;
+      }
+    }
+  }
+}
+

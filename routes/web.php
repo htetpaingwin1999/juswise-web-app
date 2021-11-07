@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'JusDbController@index')->name('index');
+Route::view('/about-us', 'juswise-theme.about')->name('about');
+Route::view('/donate-us', 'juswise-theme.donate')->name('donate');
+Route::get('/jusx-databases', 'JusDbController@jusxDb')->name('jusxDb');
+Route::get('/detail/{id}', 'JusDbController@detail')->name('db.detail');
+Route::get('/category/{id}', 'JusDbController@baseOnCategory')->name('baseOnCategory');
+Route::get('/search-date', 'JusDbController@baseOnDate')->name('baseOnDate');
 
 Auth::routes();
-
-
 
 Route::middleware('auth')->group(function () {
 

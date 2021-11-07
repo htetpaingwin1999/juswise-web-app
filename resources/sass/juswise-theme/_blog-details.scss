@@ -1,0 +1,29 @@
+.article-writer{
+ position: relative;
+//  width: 500px;
+ top: 900px;
+
+}
+.article-writer-img{
+    width: 95px;
+    height: 96px;
+    margin-top: -80px;
+}
+.arthour-icon:hover{
+    transition: 0.5s;
+    color: rgb(66, 170, 40);
+}
+.related-area{
+    position: relative;
+    top: 500px;
+    
+}
+@media screen and (max-width:780px) {
+    .article-writer-img{
+        width: 125px;
+        height: 120px;
+        margin-top: 0px;
+        border: 7px solid orange;
+        border-radius: 60%;
+    }
+}

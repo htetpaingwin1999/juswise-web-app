@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+$secondary: #5f004f;
+.mt-8{
+    margin-top: 80px;
+}
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import './juswise-theme/home';
+@import './juswise-theme/about';
+@import './juswise-theme/justX-db';
+@import './juswise-theme/donateUs.scss';
+
+@import '../../node_modules/animate.css/animate.css';
+@import './icofont/icofont.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import 'feather-icons-web/feather.css';
