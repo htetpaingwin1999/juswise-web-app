@@ -51,7 +51,9 @@ class ProblemController extends Controller
             "decision" => "required|min:5",
             "instance" => "required|min:5|max:100",
             "conclusion" => "required|min:5",
-            "related_case" => "required|min:5"
+            "related_case" => "required|min:5",
+            "document_name" => "required|min:3|max:255",
+            "document_link" => "required|min:5|max:255"
         ]);
 
 
@@ -67,6 +69,8 @@ class ProblemController extends Controller
         $case->instance = $request->instance;
         $case->conclusion = $request->conclusion;
         $case->related_case = $request->related_case;
+        $case->document_name = $request->document_name;
+        $case->document_link = $request->document_link;
         $case->user_id = Auth::id();
         $case->save();
 
@@ -114,7 +118,9 @@ class ProblemController extends Controller
             "decision" => "required|min:5",
             "instance" => "required|min:5|max:100",
             "conclusion" => "required|min:5",
-            "related_case" => "required|min:5"
+            "related_case" => "required|min:5",
+            "document_name" => "required|min:3|max:255",
+            "document_link" => "required|min:5|max:255"
         ]);
 
         $case = $problem;
@@ -129,6 +135,8 @@ class ProblemController extends Controller
         $case->instance = $request->instance;
         $case->conclusion = $request->conclusion;
         $case->related_case = $request->related_case;
+        $case->document_name = $request->document_name;
+        $case->document_link = $request->document_link;
         $case->update();
 
         return redirect()->route('problem.index')->with('toast', ['icon' => 'success', 'title' => 'Update Success.']);

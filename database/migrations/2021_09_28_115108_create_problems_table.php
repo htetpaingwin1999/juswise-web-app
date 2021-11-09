@@ -25,6 +25,8 @@ class CreateProblemsTable extends Migration
             $table->text('instance');
             $table->mediumText('conclusion');
             $table->mediumText('related_case');
+            $table->text('document_name');
+            $table->text('document_link');
             $table->bigInteger('user_id');
             $table->timestamps();
         });

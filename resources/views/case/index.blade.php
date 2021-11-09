@@ -11,17 +11,18 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-               <div class="card-body">
+                <div class="card-body">
                     <h4 class="mb-0">
                         <i class="feather-list"></i>
                         Case Lists
                     </h4>
                     <hr>
 
-                     <div class="d-flex align-items-baseline">
+                    <div class="d-flex align-items-baseline">
                         <form action="{{ route('problem.index') }}" class="mb-4" method="GET">
                             <div class="form-inline">
-                                <input type="text" class="form-control" placeholder="Search ..." value="{{ request()->search }}" name="search"  required>
+                                <input type="text" class="form-control" placeholder="Search ..."
+                                    value="{{ request()->search }}" name="search" required>
                                 <button class="btn btn-primary ms-3">
                                     <i class="feather-search"></i>
                                 </button>
@@ -30,10 +31,11 @@
 
                         <div class="ms-5 d-flex align-items-center">
                             @isset(request()->search)
-                                <a href="{{ route('problem.index') }}" class="text-decoration-none btn btn-danger btn-sm">
-                                   x
-                                </a>
-                                <p class="fw-bold mt-3 ms-2">Search keyword : <span class="fs-5">'{{ request()->search }}'</span></p>
+                            <a href="{{ route('problem.index') }}" class="text-decoration-none btn btn-danger btn-sm">
+                                x
+                            </a>
+                            <p class="fw-bold mt-3 ms-2">Search keyword : <span class="fs-5">'{{ request()->search
+                                    }}'</span></p>
                             @endisset
                         </div>
                     </div>
@@ -54,47 +56,51 @@
 
                         <tbody>
                             @forelse ($cases as $case)
-                                
-                                <tr>
-                                    <td>{{ $case->id }}</td>
-                                    <td class="small">{{ Str::words($case->title, 1, ' .....') }}</td>
-                                    <td>{{ $case->case_number }}</td>
-                                    <td>{{ $case->category->title }}</td>
-                                    <td>{{ $case->user->name }}</td>
-                                    <td class="text-nowrap">
-                                        <a href="{{ route('problem.show', $case->id) }}" class="btn btn-sm btn-outline-success">
-                                            Show
-                                        </a>
 
-                                        <a href="{{ route('problem.edit', $case->id) }}" class="btn btn-sm btn-outline-primary">
-                                            Edit
-                                        </a>
+                            <tr>
+                                <td>{{ $case->id }}</td>
+                                <td class="small">{{ Str::words($case->title, 1, ' .....') }}</td>
+                                <td>{{ $case->case_number }}</td>
+                                <td>{{ $case->category->title }}</td>
+                                <td>{{ $case->user->name }}</td>
+                                <td class="text-nowrap">
+                                    <a href="{{ route('problem.show', $case->id) }}"
+                                        class="btn btn-sm btn-outline-success">
+                                        Show
+                                    </a>
 
-                                        <form action="{{ route('problem.destroy', $case->id) }}" method="post" class="d-inline-block" id="form{{ $case->id }}">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="return askConfirm({{ $case->id }})">Delete</button>
-                                        </form>
-                                    </td>
-                                    <td>
-                                        <span class="small">
-                                            {{-- <i class="feather-calendar"></i> --}}
-                                            {{ $case->created_at->format("d-m-Y") }}
-                                        </span>
-                                        <br>
-                                        <span class="small">
-                                            {{-- <i class="feather-clock"></i> --}}
-                                            {{ $case->created_at->format("h:i A") }}
-                                        </span>
-                                    </td>
-                                </tr>
+                                    <a href="{{ route('problem.edit', $case->id) }}"
+                                        class="btn btn-sm btn-outline-primary">
+                                        Edit
+                                    </a>
+
+                                    <form action="{{ route('problem.destroy', $case->id) }}" method="post"
+                                        class="d-inline-block" id="form{{ $case->id }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="button" class="btn btn-sm btn-outline-danger"
+                                            onclick="return askConfirm({{ $case->id }})">Delete</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <span class="small">
+                                        {{-- <i class="feather-calendar"></i> --}}
+                                        {{ $case->created_at->format("d-m-Y") }}
+                                    </span>
+                                    <br>
+                                    <span class="small">
+                                        {{-- <i class="feather-clock"></i> --}}
+                                        {{ $case->created_at->format("h:i A") }}
+                                    </span>
+                                </td>
+                            </tr>
 
 
 
                             @empty
-                                 <tr>
-                                    <td colspan="6" class="text-center fa-2x text-black-50">There is no case.</td>    
-                                </tr>    
+                            <tr>
+                                <td colspan="6" class="text-center fa-2x text-black-50">There is no case.</td>
+                            </tr>
                             @endforelse
                         </tbody>
 
@@ -104,7 +110,7 @@
                         {{ $cases->appends(request()->all())->links() }}
                         <h4 class="mb-0">Total : {{ $cases->total() }}</h4>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     </div>
@@ -112,8 +118,8 @@
 @endsection
 
 @section('foot')
-    <script>
-         const askConfirm = (id) => {
+<script>
+    const askConfirm = (id) => {
             Swal.fire({
                 title: 'Do you want to delete?',
                 text: "You won't be able to revert this!",
@@ -135,5 +141,5 @@
                 }
             })
         }
-    </script>
+</script>
 @endsection

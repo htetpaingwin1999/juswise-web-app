@@ -285,7 +285,7 @@ JusX Database
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('review') }}" method="POST" id="setRating">
+                    <form action="{{ route('feedback.setRating') }}" method="POST" id="setRating">
                         @csrf
                         <div class="form-group required mb-5">
                             <span class="text-black-50">
@@ -326,8 +326,8 @@ JusX Database
 
                         <div class="form-group">
                             <label for="any" class="mb-2 text-black-50">Any Problem?</label>
-                            <textarea name="feedback" id="any" cols="15" rows="5" class="form-control"
-                                placeholder="Enter your message"></textarea>
+                            <textarea name="description" id="any" cols="15" rows="5" class="form-control"
+                                placeholder="Enter your message" required></textarea>
                         </div>
 
                     </form>

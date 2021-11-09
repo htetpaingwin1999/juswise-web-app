@@ -113,9 +113,10 @@
                     <div class="d-flex justify-content-between">
                         <p class="fw-bold">
                             <i class="far fa-file-alt text-success"></i>
-                            Council-62-16.pdf
+                            {{ $case->document_name }}
                         </p>
-                        <a class="btn btn-view text-secondary ">View document</a>
+                        <a href="{{ $case->document_link }}" target="_blank"
+                            class="btn btn-view text-secondary mb-0">View document</a>
                     </div>
                 </div>
 

@@ -63,9 +63,4 @@ class JusDbController extends Controller
         // return $cases;
         return view('juswise-theme.jusx-db', compact('cases'));
     }
-
-    public function test(Request $request)
-    {
-        return $request;
-    }
 }

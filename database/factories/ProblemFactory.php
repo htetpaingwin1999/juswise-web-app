@@ -19,6 +19,8 @@ $factory->define(Problem::class, function (Faker $faker) {
         "instance" => $faker->text(20),
         "conclusion" => $faker->text(500),
         "related_case" => $faker->text(100),
+        "document_name" => $faker->text(20),
+        "document_link" => $faker->text(20),
         "user_id" => User::all()->random()->id
     ];
 });

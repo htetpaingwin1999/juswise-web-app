@@ -83,6 +83,8 @@
 
                         <div class="form-group mb-4">
                             <label>Date Of Decision</label>
+                            <p class="mb-0 fs-5">Current Date : <span class="text-primary">{{ $problem->decision_date
+                                    }}</span></p>
                             <input type="date" class="form-control fs-5 @error('decision_date')
                                 is-invalid
                             @enderror" placeholder="အမှုဆုံးဖြတ်သည့်နေ့အတိအကျ"
@@ -144,6 +146,30 @@
                             @enderror" placeholder="ဆက်စပ်သည်များ (အမှု/စာအုပ်)" name="related_case"
                                 required>{{ old('related_case', $problem->related_case) }}</textarea>
                             @error('related_case')
+                            <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label>Document Name</label>
+                            <input type="text" class="form-control fs-5 @error('document_name')
+                                                    is-invalid
+                                                    @enderror" placeholder="စာအုပ်နာမည်"
+                                value="{{ old('document_name', $problem->document_name) }}" name="document_name"
+                                required>
+                            @error('document_name')
+                            <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label>Document Link</label>
+                            <input type="text" class="form-control fs-5 @error('document_link')
+                                                    is-invalid
+                                                    @enderror" placeholder="စာအုပ်လိပ်စာ"
+                                value="{{ old('document_link', $problem->document_link) }}" name="document_link"
+                                required>
+                            @error('document_link')
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>

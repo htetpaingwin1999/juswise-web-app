@@ -68,6 +68,16 @@
                         <h4 class="fw-bold text-primary">Related Cases & Documents</h4>
                         <p class="mt-2 fs-5">{{ $problem->related_case }}</p>
                     </div>
+
+                    <div class="mt-5 px-2 case-body">
+                        <h4 class="fw-bold text-primary">Document Name</h4>
+                        <p class="mt-2 fs-5">{{ $problem->document_name }}</p>
+                    </div>
+
+                    <div class="mt-5 px-2 case-body">
+                        <h4 class="fw-bold text-primary">Document Link</h4>
+                        <p class="mt-2 fs-5">{{ $problem->document_link }}</p>
+                    </div>
                 </div>
             </div>
         </div>
