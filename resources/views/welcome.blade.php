@@ -5,6 +5,9 @@ Juswise
 @endsection
 
 @section('content')
+{{-- Navigation --}}
+@include('juswise-theme.navbar')
+
 {{-- Hero Banner --}}
 <div class="container-fluid home-bg mt-5 home-ph"
     style="background-image: url('{{ asset('images/banner/home-bg.png') }}')">

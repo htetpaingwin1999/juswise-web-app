@@ -5,6 +5,9 @@ Empower Us
 @endsection
 
 @section('content')
+{{-- Navigation --}}
+@include('juswise-theme.navbar')
+
 <section id="" class="detail-bg mt-5 home-ph"
     style="background-image: url('{{ asset('images/banner/donate-us.jpg') }}')">
     <div class="container">

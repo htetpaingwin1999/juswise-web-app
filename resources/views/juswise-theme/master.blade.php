@@ -12,8 +12,6 @@
 
 <body>
 
-    {{-- Navigation --}}
-    @include('juswise-theme.navbar')
 
     {{-- Content --}}
     @yield('content')

@@ -9,6 +9,8 @@ About Us
 @endsection
 
 @section('content')
+{{-- Navigation --}}
+@include('juswise-theme.navbar')
 
 {{-- Hero Banner --}}
 <div class="container-fluid about-page-bg mt-5 bg-blur  home-ph "

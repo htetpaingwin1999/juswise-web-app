@@ -20,6 +20,7 @@ Route::get('/jusx-databases', 'JusDbController@jusxDb')->name('jusxDb');
 Route::get('/detail/{id}', 'JusDbController@detail')->name('db.detail');
 Route::get('/category/{id}', 'JusDbController@baseOnCategory')->name('baseOnCategory');
 Route::get('/search-date', 'JusDbController@baseOnDate')->name('baseOnDate');
+Route::post('/review', 'JusDbController@test')->name('review');
 
 Auth::routes();
 

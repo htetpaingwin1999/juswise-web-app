@@ -46,11 +46,11 @@ class JusDbController extends Controller
 
     public function baseOnDate(Request $request)
     {
-        // $start = date("j F Y", strtotime($request->start));
-        // $end = date("j F Y", strtotime($request->end));;
+        $start = date("j F Y", strtotime($request->start));
+        $end = date("j F Y", strtotime($request->end));;
 
-        $start = $request->start;
-        $end = $request->end;
+        // $start = $request->start;
+        // $end = $request->end;
 
         // return $start . " " . $end;
 
@@ -62,5 +62,10 @@ class JusDbController extends Controller
 
         // return $cases;
         return view('juswise-theme.jusx-db', compact('cases'));
+    }
+
+    public function test(Request $request)
+    {
+        return $request;
     }
 }
