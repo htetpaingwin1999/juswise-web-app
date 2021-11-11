@@ -251,7 +251,7 @@ JusX Database
                         }}</span>
                     <p class="fs-5">{{ Str::words($case->case_summary, 35, '...') }}</p>
                     <div class="">
-                        <a href="{{ route('db.detail', $case->id) }}" class="btn btn-outline-secondary float-end">View
+                        <a href="{{ route('db.detail', $case->slug) }}" class="btn btn-outline-secondary float-end">View
                             More</a>
                     </div>
                 </div>

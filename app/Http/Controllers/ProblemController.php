@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Problem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ProblemController extends Controller
 {
@@ -15,6 +16,7 @@ class ProblemController extends Controller
      */
     public function index()
     {
+
         $cases =
             Problem::when(isset(request()->search), function ($q) {
                 $search = request()->search;
@@ -59,6 +61,7 @@ class ProblemController extends Controller
 
         $case = new Problem();
         $case->title = $request->title;
+        $case->slug = Str::slug($request->title, '-') . "-" . uniqid();
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;
         $case->allegation = $request->allegation;
