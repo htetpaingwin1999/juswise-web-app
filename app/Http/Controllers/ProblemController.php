@@ -127,6 +127,9 @@ class ProblemController extends Controller
         ]);
 
         $case = $problem;
+        if ($case->title != $request->title) {
+            $case->slug = Str::slug($request->title, '-') . "-" . uniqid();
+        }
         $case->title = $request->title;
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;
