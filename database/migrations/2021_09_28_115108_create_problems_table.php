@@ -16,6 +16,7 @@ class CreateProblemsTable extends Migration
         Schema::create('problems', function (Blueprint $table) {
             $table->id();
             $table->text('title');
+            $table->string('slug')->nullable()->uniqid();
             $table->string('case_number', '100');
             $table->bigInteger('category_id');
             $table->text('allegation');
