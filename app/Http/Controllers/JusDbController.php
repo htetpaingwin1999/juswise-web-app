@@ -23,13 +23,12 @@ class JusDbController extends Controller
         return view('juswise-theme.jusx-db', compact('cases'));
     }
 
-    public function detail($id)
+    public function detail($slug)
     {
-        $case = Problem::find($id);
-        // $date = date("j F Y", strtotime($case->decision_date));
-        // return $date;
-        // return $case;
-
+        $case = Problem::where('slug', $slug)->first();
+        if (empty($case)) {
+            return abort(404);
+        }
         return view('juswise-theme.detail', compact('case'));
     }
 
