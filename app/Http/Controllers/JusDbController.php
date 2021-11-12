@@ -19,7 +19,7 @@ class JusDbController extends Controller
                 $search = request()->search;
                 return $q->orwhere("title", "like", "%$search%")->orwhere("case_number", "like", "%$search%")->orwhere("allegation", "like", "%$search%")->orwhere("case_summary", "like", "%$search%");
             })->with('category')->latest('id')->paginate(7);
-        // return $cases;
+
         return view('juswise-theme.jusx-db', compact('cases'));
     }
 
