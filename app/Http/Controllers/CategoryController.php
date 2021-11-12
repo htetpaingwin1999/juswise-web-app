@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -42,6 +43,7 @@ class CategoryController extends Controller
 
         $category = new Category();
         $category->title = $request->title;
+        $category->slug = Str::slug($request->title, '-') . "-" . uniqid();
         $category->user_id = Auth::id();
         $category->save();
 
