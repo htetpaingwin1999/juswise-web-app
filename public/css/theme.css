@@ -17429,7 +17429,7 @@ body {
 }
 
 .jusx-details {
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -17468,14 +17468,6 @@ body {
 
 .jusx-details .custom-content .custom-footer {
   border-top: none !important;
-}
-
-.jusx-details .custom-content .star-rating span {
-  color: gray;
-}
-
-.jusx-details .custom-content .star-rating .rate {
-  color: #7A0A4F !important;
 }
 
 p {

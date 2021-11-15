@@ -27,7 +27,7 @@ JusX Database
 
     label.star {
         position: relative;
-        right: 280px;
+        right: 304px;
         float: right;
         padding: 5px;
         font-size: 20px;
@@ -73,6 +73,30 @@ JusX Database
         color:
             #ff7e1a;
 
+    }
+
+    @media only screen and (max-width: 425px) {
+        label.star {
+            right: 202px;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        label.star {
+            right: 166px;
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        label.star {
+            right: 152px;
+        }
+    }
+
+    @media only screen and (max-width: 325px) {
+        label.star {
+            right: 110px;
+        }
     }
 
     /** end rating **/
@@ -184,7 +208,11 @@ JusX Database
                     <div class="d-md-flex justify-content-between">
                         {{-- Category Lists --}}
                         <div class="">
-                            <h4 class="text-secondary mb-3 mt-0">Category of Case</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-secondary mb-3 mt-0">Category of Case</h4>
+                                <i
+                                    class="icofont-close-line fs-1 close-engine close d-block me-2 d-md-none text-danger"></i>
+                            </div>
 
                             <div>
                                 @foreach ($categories as $category)
@@ -224,7 +252,7 @@ JusX Database
                             </form>
                         </div>
 
-                        <i class="icofont-close-line fs-1 close-engine close d-none d-xl-block"></i>
+                        <i class="icofont-close-line fs-1 close-engine close d-none d-md-block"></i>
                     </div>
 
                 </div>

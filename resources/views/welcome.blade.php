@@ -34,8 +34,7 @@ Juswise
                     <div class="col-12 col-md-4">
                         <div>
                             <video width="450px" class=" shadow rounded" autoplay loop>
-                                {{--
-                                <source src="{{ asset('juswise-theme/img/hd.mp4') }}" type="video/mp4"> --}}
+                                <source src="{{ asset('juswise-theme/img/hd.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                     </div>
