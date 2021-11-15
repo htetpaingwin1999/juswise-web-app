@@ -105,14 +105,14 @@ cursor: pointer;
    cursor: pointer;
   }
 }
+
 @media screen and (max-width:480px){
   .jux-search-bg{
     position: relative;
     margin-left: -30px!important;
     top: 30px!important;
     left: 50px!important;
-   background-color: #E8E8E8;
-    
+   background-color: #E8E8E8;  
   }
 }
 @media screen and (max-width:780px){
@@ -171,7 +171,7 @@ cursor: pointer;
 }
 
 .jusx-details{
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 50px;
 
   .line{
@@ -213,16 +213,7 @@ cursor: pointer;
       border-top: none !important;
     }
 
-    .star-rating{
-
-      span{
-        color:gray;
-      }
-        
-      .rate{
-        color: #7A0A4F!important;
-      }
-    }
+    
   }
 }
 

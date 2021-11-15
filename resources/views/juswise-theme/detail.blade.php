@@ -120,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="text-end mt-3  ">
+                <div class="text-end mt-5 mt-md-2">
                     <a href="{{ route('jusxDb') }}" class="btn btn-primary btn-back ">Back</a>
                 </div>
             </div>
