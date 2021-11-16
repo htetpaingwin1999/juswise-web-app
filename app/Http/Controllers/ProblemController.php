@@ -16,6 +16,7 @@ class ProblemController extends Controller
      */
     public function index()
     {
+
         $cases =
             Problem::when(isset(request()->search), function ($q) {
                 $search = request()->search;

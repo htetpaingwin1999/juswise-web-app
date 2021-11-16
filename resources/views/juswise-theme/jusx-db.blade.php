@@ -78,7 +78,7 @@ JusX Database
 
                         <div>
 
-                            <button class="btn btn-primary btn-search text-white" form="searchCase">Search</button>
+                            <button class="btn btn-secondary btn-search text-white" form="searchCase">Search</button>
                         </div>
 
                     </div>
