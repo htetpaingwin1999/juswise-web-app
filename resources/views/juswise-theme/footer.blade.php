@@ -19,10 +19,10 @@
             <div class="col-6 col-lg-2 wow animate__fadeInBottomLeft">
                 <h4 class="fw-bold text-white">Quick Look</h4>
                 <div class="d-flex flex-column lh-lg mb-5 mb-md-0">
-                    <a href="index.html" class="text-decoration-none text-white">Home</a>
-                    <a href="jusx-db-one.html" class="text-decoration-none text-white">JusX Database</a>
-                    <a href="about.html" class="text-decoration-none text-white">About Us</a>
-                    <a href="donatUs.html" class="text-decoration-none text-white">Empower Us</a>
+                    <a href="{{ route('index') }}" class="text-decoration-none text-white">Home</a>
+                    <a href="{{ route('jusxDb') }}" class="text-decoration-none text-white">JusX Database</a>
+                    <a href="{{ route('about') }}" class="text-decoration-none text-white">About Us</a>
+                    <a href="{{ route('donate') }}" class="text-decoration-none text-white">Empower Us</a>
                 </div>
             </div>
             <div class="col-6 col-lg-2 wow animate__fadeInBottomRight">
