@@ -1,6 +1,12 @@
 body{
   transition: 1s!important;
 }
+
+.selected{
+  background: $secondary !important;
+  color: white !important;
+}
+
 .jusX-Db-bg{
   // background-image: url("../Data/photo/jusx-database.jpg");
   background-size: cover;

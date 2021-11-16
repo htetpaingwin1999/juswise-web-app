@@ -4,6 +4,7 @@
 JusX Database
 @endsection
 
+
 @section('content')
 <nav class="navbar navbar-expand-lg py-3 navbar-light animate__animated animate__bounceInDown  position-fixed top-0 w-100"
     id="nav">

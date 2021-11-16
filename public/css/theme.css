@@ -17250,6 +17250,11 @@ body {
   transition: 1s !important;
 }
 
+.selected {
+  background: #5f004f !important;
+  color: white !important;
+}
+
 .jusX-Db-bg {
   background-size: cover;
   background-repeat: no-repeat;
