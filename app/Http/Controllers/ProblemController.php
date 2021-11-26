@@ -44,7 +44,7 @@ class ProblemController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => "required|min:5|max:255",
+            "title" => "required|min:5|unique:problems,title|max:255",
             "case_number" => "required|min:3|max:100",
             "category_id" => "required|exists:categories,id",
             "allegation" => "required|min:5|max:255",
@@ -112,7 +112,7 @@ class ProblemController extends Controller
     public function update(Request $request, Problem $problem)
     {
         $request->validate([
-            "title" => "required|min:5|max:255",
+            "title" => "required|min:5|unique:problems,title|max:255",
             "case_number" => "required|min:3|max:100",
             "category_id" => "required|exists:categories,id",
             "allegation" => "required|min:5|max:255",

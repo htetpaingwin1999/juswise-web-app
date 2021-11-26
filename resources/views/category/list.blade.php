@@ -17,7 +17,7 @@
             <td>{{ $category->user->name }}</td>
             <td>
                 <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-outline-success">
-                    Edit
+                    <i class="feather-edit"></i>
                 </a>
 
                 <form action="{{ route('category.destroy', $category->id) }}" method="post" class="d-inline-block"

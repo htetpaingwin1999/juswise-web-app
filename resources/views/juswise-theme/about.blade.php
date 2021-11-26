@@ -46,7 +46,8 @@ About Us
                                 of human resources to reach its goals with collective creativity and harmonious
                                 teamwork. As JusX is constantly guided to maintain a fresh and empathetic learning
                                 environment for all members, we welcome any individuals to explore their talents and
-                                begin their self-discovery journey by f innovative and passionate law students,
+                                begin their self-discovery journey by working here with innovative and passionate law
+                                students,
                                 developers and designers who are passionate about changing Myanmar's legal services
                                 industry for the better.
                             </p>

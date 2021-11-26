@@ -9,9 +9,9 @@
     </x-bread-crumb>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-9">
             <div class="card">
-               <div class="card-body">
+                <div class="card-body">
                     <h4 class="mb-0">
                         <i class="feather-layers"></i>
                         Case Category Lists
@@ -26,12 +26,12 @@
                             <button class="btn btn-primary btn-lg ms-3">Add Category</button>
                         </div>
                         @error('title')
-                            <small class="text-danger">{{ $message }}</small>
+                        <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </form>
 
                     @include('category.list')
-               </div>
+                </div>
             </div>
         </div>
     </div>
@@ -39,8 +39,8 @@
 @endsection
 
 @section('foot')
-    <script>
-        const askConfirm = (id) => {
+<script>
+    const askConfirm = (id) => {
             Swal.fire({
                 title: `Are you sure?`,
                 text: "You won't be able to revert this!",
@@ -63,7 +63,5 @@
             })
         }
 
-    </script>
+</script>
 @endsection
-
-
