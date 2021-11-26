@@ -57,7 +57,13 @@
                             <tr>
                                 <td>{{ $feedback->id }}</td>
                                 <td>{{ $feedback->rating }}</td>
-                                <td>{{ $feedback->useful }}</td>
+                                <td>
+                                    @if ($feedback->useful == 1)
+                                    Yes
+                                    @else
+                                    No
+                                    @endif
+                                </td>
                                 <td>{{ $feedback->description }}</td>
                                 <td>
                                     <span class="small">

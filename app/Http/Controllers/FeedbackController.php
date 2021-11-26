@@ -21,8 +21,9 @@ class FeedbackController extends Controller
     {
         $request->validate([
             "star" => "required",
-            "description" => "required|min:5"
+            "description" => "required|min:3"
         ]);
+
 
         $feedback = new Feedback();
         $feedback->rating = $request->star;
