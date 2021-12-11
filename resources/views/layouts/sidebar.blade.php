@@ -35,6 +35,8 @@
             <x-menu-item name="Case Category" icon="fas fa-stream" link="{{ route('category.index') }}"></x-menu-item>
             <x-menu-item name="Article Category" icon="fas fa-stream" link="{{ route('article-category.index') }}">
             </x-menu-item>
+            <x-menu-item name="Blog Category" icon="fas fa-stream" link="{{ route('blog-category.index') }}">
+            </x-menu-item>
             <hr class="text-primary">
 
             {{-- Case Manager --}}
