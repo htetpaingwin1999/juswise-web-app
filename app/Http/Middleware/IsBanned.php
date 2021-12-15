@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminOnly
+class IsBanned
 {
     /**
      * Handle an incoming request.
@@ -16,8 +16,9 @@ class AdminOnly
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->role != 0 && Auth::user()->role != 1) {
-            return redirect()->route('home')->with('toast', ['icon' => 'error', 'title' => "Access Denied."]);
+        if (Auth::user()->isBanned == 1) {
+            Auth::logout();
+            return redirect()->route('login')->with('alert', ['icon' => 'error', 'title' => "Account is banned.", 'text' => 'Please contact to the admin team.']);
         }
         return $next($request);
     }

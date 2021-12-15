@@ -30,6 +30,7 @@ Users Lists
                                     <th>Email</th>
                                     <th>Position</th>
                                     <th>Role</th>
+                                    <th>Status</th>
                                     <th>Control</th>
                                     <th>Created_at</th>
                                 </tr>
@@ -48,18 +49,39 @@ Users Lists
                                         <span class="">Worker</span>
                                         @endisset
                                     </td>
-                                    <td>{{ $user->role }}</td>
+                                    <td>
+                                        @if ($user->role == 0)
+                                        <span class="fw-bold badge bg-primary">Admin</span>
+                                        @elseif ($user->role == 1)
+                                        <span class="fw-bold badge bg-info">Case Volunteer</span>
+                                        @elseif ($user->role == 2)
+                                        <span class="fw-bold badge bg-secondary">Contributor</span>
+                                        @else
+                                        <span>User</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($user->isBanned == 1)
+                                        <span class="badge bg-danger">Banned</span>
+                                        @else
+                                        <span class="badge bg-success">Normal</span>
+                                        @endif
+                                    </td>
                                     <td>
 
+                                        <form action="{{ route('user-manager.control') }}" method="GET">
+                                            <input type="hidden" name="id" value="{{ $user->id }}">
+                                            <button class="btn btn-sm btn-outline-primary">Permission</button>
+                                        </form>
                                     </td>
                                     <td>
                                         <span class="small">
-                                            {{-- <i class="feather-calendar"></i> --}}
+                                            <i class="feather-calendar"></i>
                                             {{ $user->created_at->format("d-m-Y") }}
                                         </span>
                                         <br>
                                         <span class="small">
-                                            {{-- <i class="feather-clock"></i> --}}
+                                            <i class="feather-clock"></i>
                                             {{ $user->created_at->format("h:i A") }}
                                         </span>
                                     </td>

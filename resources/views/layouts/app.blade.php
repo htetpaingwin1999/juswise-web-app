@@ -8,28 +8,29 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @yield('theme')
 </head>
+
 <body id="page-top">
 
     @guest
-        @yield('content')
+    @yield('content')
     @else
-        <div class="container-fluid box">
-             <div class="row">
-                <!-- Sidebar Bar -->
-                @include('layouts.sidebar')
+    <div class="container-fluid box">
+        <div class="row">
+            <!-- Sidebar Bar -->
+            @include('layouts.sidebar')
 
-                <!-- Content Area -->
-                <div class="col-12 col-lg-9 col-xl-9 content vh-100">
+            <!-- Content Area -->
+            <div class="col-12 col-lg-9 col-xl-9 content vh-100">
 
-                    {{-- Header --}}
-                    @include('layouts.header')
+                {{-- Header --}}
+                @include('layouts.header')
 
-                    {{-- Content --}}
-                    @yield('content')
+                {{-- Content --}}
+                @yield('content')
 
-                </div>
             </div>
         </div>
+    </div>
     @endguest
 
 
@@ -37,7 +38,10 @@
     @yield('foot')
 
     @auth
-        @include('layouts.toast')
+    @include('layouts.toast')
     @endauth
+
+    @include('layouts.alert')
 </body>
+
 </html>

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -19,14 +19,7 @@
 
                     <br>
 
-                    {{ Request::url() }}
-
-                    <br>
-
                     {{ date('y - m -d | h : i A') }}
-
-                    <button class="btn btn-success test-alert">Alert</button>
-                    <button class="btn btn-primary test-toast">Toast</button>
                 </div>
             </div>
         </div>

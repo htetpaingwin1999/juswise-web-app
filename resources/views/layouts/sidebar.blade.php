@@ -21,6 +21,8 @@
                 </a>
             </li>
 
+
+            @if (Auth::user()->role == 0)
             {{-- Feedback --}}
             <li class="mt-1">
                 <a href="{{ route('feedback.index') }}"
@@ -31,11 +33,9 @@
             </li>
 
             {{-- User Manager --}}
-            @if (Auth::user()->role == 0)
             <x-menu-title title="User Manager" icon="fas fa-users-cog"></x-menu-title>
             <x-menu-item name="User Lists" icon="fas fa-users" link="{{ route('user-manager.index') }}"></x-menu-item>
             <hr class="text-primary">
-            @endif
 
             {{-- Category Manager --}}
             <x-menu-title title="Category Manager" icon="fas fa-layer-group"></x-menu-title>
@@ -66,6 +66,40 @@
             <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
             </x-menu-item>
             <hr class="text-primary">
+
+            @elseif (Auth::user()->role == 1)
+            {{-- Case Manager --}}
+            <x-menu-title title="Case Manager" icon="fas fa-book"></x-menu-title>
+            <x-menu-item name="Create Case" icon="fas fa-plus-circle" link="{{ route('problem.create') }}">
+            </x-menu-item>
+            <x-menu-item name="Case List" icon="fas fa-table" link="{{ route('problem.index') }}"></x-menu-item>
+            <hr class="text-primary">
+
+            {{-- Account Setting --}}
+            <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
+            <x-menu-item name="Profile" icon="fas fa-user" link="{{ route('profile') }}"></x-menu-item>
+            <x-menu-item name="Edit Profile" icon="fas fa-user-edit" link="{{ route('profile.editProfile') }}">
+            </x-menu-item>
+            <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
+            </x-menu-item>
+            <hr class="text-primary">
+            @elseif (Auth::user()->role == 2)
+            {{-- Article Manager --}}
+            <x-menu-title title="Article Manager" icon="far fa-newspaper"></x-menu-title>
+            <x-menu-item name="Create Article" icon="fas fa-plus-circle" link="{{ route('article.create') }}">
+            </x-menu-item>
+            <x-menu-item name="Article Lists" icon="far fa-list-alt" link="{{ route('article.index') }}"></x-menu-item>
+            <hr class="text-primary">
+
+            {{-- Account Setting --}}
+            <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
+            <x-menu-item name="Profile" icon="fas fa-user" link="{{ route('profile') }}"></x-menu-item>
+            <x-menu-item name="Edit Profile" icon="fas fa-user-edit" link="{{ route('profile.editProfile') }}">
+            </x-menu-item>
+            <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
+            </x-menu-item>
+            <hr class="text-primary">
+            @endif
         </ul>
 
         {{-- Logout --}}
