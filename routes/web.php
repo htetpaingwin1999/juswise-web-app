@@ -35,9 +35,6 @@ Route::middleware('auth')->group(function () {
         Route::resource('problem', 'ProblemController');
         Route::resource('article', 'ArticleController');
         Route::resource('article-category', 'ArticleCategoryController');
-
-        /* Blog  Category */
-        Route::resource('blog-category', 'BlogCategoryController');
     });
 
     Route::prefix('profile')->group(function () {
