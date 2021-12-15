@@ -35,8 +35,6 @@
             <x-menu-item name="Case Category" icon="fas fa-stream" link="{{ route('category.index') }}"></x-menu-item>
             <x-menu-item name="Article Category" icon="fas fa-stream" link="{{ route('article-category.index') }}">
             </x-menu-item>
-            <x-menu-item name="Blog Category" icon="fas fa-stream" link="{{ route('blog-category.index') }}">
-            </x-menu-item>
             <hr class="text-primary">
 
             {{-- Case Manager --}}
@@ -52,32 +50,6 @@
             </x-menu-item>
             <x-menu-item name="Article Lists" icon="far fa-list-alt" link="{{ route('article.index') }}"></x-menu-item>
             <hr class="text-primary">
-
-            {{-- Proccess Schedual --}}
-            {{-- <x-menu-title title="Proccess Schedual"></x-menu-title>
-
-            <li class="nav-item">
-                <a class="nav-link " href="volunteer_todo_list.html">
-                    <i class="fas fa-table"></i>
-                    <span>Volunteer_Todo List</span>
-                </a>
-            </li>
-            <li class="nav-item"><a class="nav-link   " href="volunteer_todo_add.html"><i
-                        class="fas fa-plus"></i><span>Volunteer_Todo Add</span></a></li>
-            <hr style="color: #5f004f;">
-            <li class="mt-4 ">
-
-                <h5 class="mt-3 ps-2"><i class=" fas fa-clipboard-list me-2"></i>User Feedback </h5>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="volunteer_todo_list.html">
-                    <i class="fas fa-id-card"></i>
-                    <span>User Feedback</span>
-                </a>
-            </li> --}}
-
-            {{--
-            <hr style="color: #5f004f;"> --}}
 
             {{-- Account Setting --}}
             <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
