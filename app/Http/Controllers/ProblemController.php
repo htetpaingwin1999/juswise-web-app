@@ -16,6 +16,12 @@ class ProblemController extends Controller
      */
     public function index()
     {
+        // $all = Problem::all();
+
+        // foreach ($all as $a) {
+        //     $a->slug = Str::slug($a->title, '-') . "-" . uniqid();
+        //     $a->update();
+        // }
 
         $cases =
             Problem::when(isset(request()->search), function ($q) {

@@ -30,6 +30,13 @@
                 </a>
             </li>
 
+            {{-- User Manager --}}
+            @if (Auth::user()->role == 0)
+            <x-menu-title title="User Manager" icon="fas fa-users-cog"></x-menu-title>
+            <x-menu-item name="User Lists" icon="fas fa-users" link="{{ route('user-manager.index') }}"></x-menu-item>
+            <hr class="text-primary">
+            @endif
+
             {{-- Category Manager --}}
             <x-menu-title title="Category Manager" icon="fas fa-layer-group"></x-menu-title>
             <x-menu-item name="Case Category" icon="fas fa-stream" link="{{ route('category.index') }}"></x-menu-item>

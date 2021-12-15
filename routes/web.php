@@ -37,6 +37,10 @@ Route::middleware('auth')->group(function () {
         Route::resource('article-category', 'ArticleCategoryController');
     });
 
+    Route::middleware('AdminOnly')->group(function () {
+        Route::get('/user-manager', 'UserManagerController@index')->name('user-manager.index');
+    });
+
     Route::prefix('profile')->group(function () {
         Route::get('/', 'ProfileController@profile')->name('profile');
         Route::get('/edit-profile', 'ProfileController@editProfile')->name('profile.editProfile');
