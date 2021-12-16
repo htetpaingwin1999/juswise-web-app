@@ -40,71 +40,79 @@
                         </div>
                     </div>
 
-                    <table class="table table-hover table-bordered table-responsive">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
 
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Parties</th>
-                                <th>Case Number</th>
-                                <th>Category</th>
-                                <th>Owner</th>
-                                <th>Control</th>
-                                <th>Created_at</th>
-                            </tr>
-                        </thead>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Parties</th>
+                                    <th>Case Number</th>
+                                    <th>Category</th>
+                                    <th>Owner</th>
+                                    <th>Control</th>
+                                    <th>Created_at</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            @forelse ($cases as $case)
+                            <tbody>
+                                @forelse ($cases as $case)
 
-                            <tr>
-                                <td>{{ $case->id }}</td>
-                                <td class="small">{{ Str::words($case->title, 1, ' .....') }}</td>
-                                <td>{{ $case->case_number }}</td>
-                                <td>{{ $case->category->title }}</td>
-                                <td>{{ $case->user->name }}</td>
-                                <td class="text-nowrap">
-                                    <a href="{{ route('problem.show', $case->id) }}"
-                                        class="btn btn-sm btn-outline-success">
-                                        Show
-                                    </a>
+                                <tr>
+                                    <td>{{ $case->id }}</td>
+                                    <td class="small">{{ Str::words($case->title, 1, ' .....') }}</td>
+                                    <td>{{ $case->case_number }}</td>
+                                    <td>
+                                        @isset($case->category)
+                                        {{ $case->category->title }}
+                                        @else
+                                        <span class="text-danger">Deleted</span>
+                                        @endisset
+                                    </td>
+                                    <td>{{ $case->user->name }}</td>
+                                    <td class="text-nowrap">
+                                        <a href="{{ route('problem.show', $case->id) }}"
+                                            class="btn btn-sm btn-outline-success">
+                                            Show
+                                        </a>
 
-                                    <a href="{{ route('problem.edit', $case->id) }}"
-                                        class="btn btn-sm btn-outline-primary">
-                                        Edit
-                                    </a>
+                                        <a href="{{ route('problem.edit', $case->id) }}"
+                                            class="btn btn-sm btn-outline-primary">
+                                            Edit
+                                        </a>
 
-                                    <form action="{{ route('problem.destroy', $case->id) }}" method="post"
-                                        class="d-inline-block" id="form{{ $case->id }}">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="button" class="btn btn-sm btn-outline-danger"
-                                            onclick="return askConfirm({{ $case->id }})">Delete</button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <span class="small">
-                                        {{-- <i class="feather-calendar"></i> --}}
-                                        {{ $case->created_at->format("d-m-Y") }}
-                                    </span>
-                                    <br>
-                                    <span class="small">
-                                        {{-- <i class="feather-clock"></i> --}}
-                                        {{ $case->created_at->format("h:i A") }}
-                                    </span>
-                                </td>
-                            </tr>
+                                        <form action="{{ route('problem.destroy', $case->id) }}" method="post"
+                                            class="d-inline-block" id="form{{ $case->id }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="button" class="btn btn-sm btn-outline-danger"
+                                                onclick="return askConfirm({{ $case->id }})">Delete</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <span class="small">
+                                            {{-- <i class="feather-calendar"></i> --}}
+                                            {{ $case->created_at->format("d-m-Y") }}
+                                        </span>
+                                        <br>
+                                        <span class="small">
+                                            {{-- <i class="feather-clock"></i> --}}
+                                            {{ $case->created_at->format("h:i A") }}
+                                        </span>
+                                    </td>
+                                </tr>
 
 
 
-                            @empty
-                            <tr>
-                                <td colspan="6" class="text-center fa-2x text-black-50">There is no case.</td>
-                            </tr>
-                            @endforelse
-                        </tbody>
+                                @empty
+                                <tr>
+                                    <td colspan="6" class="text-center fa-2x text-black-50">There is no case.</td>
+                                </tr>
+                                @endforelse
+                            </tbody>
 
-                    </table>
+                        </table>
+                    </div>
 
                     <div class="d-lg-flex justify-content-between align-items-center">
                         {{ $cases->appends(request()->all())->links() }}
