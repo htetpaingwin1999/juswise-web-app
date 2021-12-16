@@ -62,7 +62,13 @@
                                     <td>{{ $case->id }}</td>
                                     <td class="small">{{ Str::words($case->title, 1, ' .....') }}</td>
                                     <td>{{ $case->case_number }}</td>
-                                    <td>{{ $case->category->title }}</td>
+                                    <td>
+                                        @isset($case->category)
+                                        {{ $case->category->title }}
+                                        @else
+                                        <span class="text-danger">Deleted</span>
+                                        @endisset
+                                    </td>
                                     <td>{{ $case->user->name }}</td>
                                     <td class="text-nowrap">
                                         <a href="{{ route('problem.show', $case->id) }}"
