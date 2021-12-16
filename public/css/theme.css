@@ -17250,6 +17250,11 @@ body {
   transition: 1s !important;
 }
 
+.selected {
+  background: #5f004f !important;
+  color: white !important;
+}
+
 .jusX-Db-bg {
   background-size: cover;
   background-repeat: no-repeat;
@@ -17429,7 +17434,7 @@ body {
 }
 
 .jusx-details {
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -17468,14 +17473,6 @@ body {
 
 .jusx-details .custom-content .custom-footer {
   border-top: none !important;
-}
-
-.jusx-details .custom-content .star-rating span {
-  color: gray;
-}
-
-.jusx-details .custom-content .star-rating .rate {
-  color: #7A0A4F !important;
 }
 
 p {

@@ -21,6 +21,8 @@
                 </a>
             </li>
 
+
+            @if (Auth::user()->role == 0)
             {{-- Feedback --}}
             <li class="mt-1">
                 <a href="{{ route('feedback.index') }}"
@@ -29,6 +31,11 @@
                     <span>User Feedback</span>
                 </a>
             </li>
+
+            {{-- User Manager --}}
+            <x-menu-title title="User Manager" icon="fas fa-users-cog"></x-menu-title>
+            <x-menu-item name="User Lists" icon="fas fa-users" link="{{ route('user-manager.index') }}"></x-menu-item>
+            <hr class="text-primary">
 
             {{-- Category Manager --}}
             <x-menu-title title="Category Manager" icon="fas fa-layer-group"></x-menu-title>
@@ -51,31 +58,22 @@
             <x-menu-item name="Article Lists" icon="far fa-list-alt" link="{{ route('article.index') }}"></x-menu-item>
             <hr class="text-primary">
 
-            {{-- Proccess Schedual --}}
-            {{-- <x-menu-title title="Proccess Schedual"></x-menu-title>
+            {{-- Account Setting --}}
+            <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
+            <x-menu-item name="Profile" icon="fas fa-user" link="{{ route('profile') }}"></x-menu-item>
+            <x-menu-item name="Edit Profile" icon="fas fa-user-edit" link="{{ route('profile.editProfile') }}">
+            </x-menu-item>
+            <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
+            </x-menu-item>
+            <hr class="text-primary">
 
-            <li class="nav-item">
-                <a class="nav-link " href="volunteer_todo_list.html">
-                    <i class="fas fa-table"></i>
-                    <span>Volunteer_Todo List</span>
-                </a>
-            </li>
-            <li class="nav-item"><a class="nav-link   " href="volunteer_todo_add.html"><i
-                        class="fas fa-plus"></i><span>Volunteer_Todo Add</span></a></li>
-            <hr style="color: #5f004f;">
-            <li class="mt-4 ">
-
-                <h5 class="mt-3 ps-2"><i class=" fas fa-clipboard-list me-2"></i>User Feedback </h5>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="volunteer_todo_list.html">
-                    <i class="fas fa-id-card"></i>
-                    <span>User Feedback</span>
-                </a>
-            </li> --}}
-
-            {{--
-            <hr style="color: #5f004f;"> --}}
+            @elseif (Auth::user()->role == 1)
+            {{-- Case Manager --}}
+            <x-menu-title title="Case Manager" icon="fas fa-book"></x-menu-title>
+            <x-menu-item name="Create Case" icon="fas fa-plus-circle" link="{{ route('problem.create') }}">
+            </x-menu-item>
+            <x-menu-item name="Case List" icon="fas fa-table" link="{{ route('problem.index') }}"></x-menu-item>
+            <hr class="text-primary">
 
             {{-- Account Setting --}}
             <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
@@ -85,6 +83,23 @@
             <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
             </x-menu-item>
             <hr class="text-primary">
+            @elseif (Auth::user()->role == 2)
+            {{-- Article Manager --}}
+            <x-menu-title title="Article Manager" icon="far fa-newspaper"></x-menu-title>
+            <x-menu-item name="Create Article" icon="fas fa-plus-circle" link="{{ route('article.create') }}">
+            </x-menu-item>
+            <x-menu-item name="Article Lists" icon="far fa-list-alt" link="{{ route('article.index') }}"></x-menu-item>
+            <hr class="text-primary">
+
+            {{-- Account Setting --}}
+            <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>
+            <x-menu-item name="Profile" icon="fas fa-user" link="{{ route('profile') }}"></x-menu-item>
+            <x-menu-item name="Edit Profile" icon="fas fa-user-edit" link="{{ route('profile.editProfile') }}">
+            </x-menu-item>
+            <x-menu-item name="Change Password" icon="fas fa-sync-alt" link="{{ route('profile.changePassword') }}">
+            </x-menu-item>
+            <hr class="text-primary">
+            @endif
         </ul>
 
         {{-- Logout --}}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Problem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ProblemController extends Controller
 {
@@ -15,6 +16,13 @@ class ProblemController extends Controller
      */
     public function index()
     {
+        // $all = Problem::all();
+
+        // foreach ($all as $a) {
+        //     $a->slug = Str::slug($a->title, '-') . "-" . uniqid();
+        //     $a->update();
+        // }
+
         $cases =
             Problem::when(isset(request()->search), function ($q) {
                 $search = request()->search;
@@ -42,7 +50,7 @@ class ProblemController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => "required|min:5|max:255",
+            "title" => "required|min:5|unique:problems,title|max:255",
             "case_number" => "required|min:3|max:100",
             "category_id" => "required|exists:categories,id",
             "allegation" => "required|min:5|max:255",
@@ -59,6 +67,7 @@ class ProblemController extends Controller
 
         $case = new Problem();
         $case->title = $request->title;
+        $case->slug = Str::slug($request->title, '-') . "-" . uniqid();
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;
         $case->allegation = $request->allegation;
@@ -109,7 +118,7 @@ class ProblemController extends Controller
     public function update(Request $request, Problem $problem)
     {
         $request->validate([
-            "title" => "required|min:5|max:255",
+            "title" => "required|min:5|unique:problems,title|max:255",
             "case_number" => "required|min:3|max:100",
             "category_id" => "required|exists:categories,id",
             "allegation" => "required|min:5|max:255",
@@ -124,6 +133,9 @@ class ProblemController extends Controller
         ]);
 
         $case = $problem;
+        if ($case->title != $request->title) {
+            $case->slug = Str::slug($request->title, '-') . "-" . uniqid();
+        }
         $case->title = $request->title;
         $case->case_number = $request->case_number;
         $case->category_id = $request->category_id;

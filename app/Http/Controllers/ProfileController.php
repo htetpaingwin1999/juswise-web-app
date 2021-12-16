@@ -30,12 +30,14 @@ class ProfileController extends Controller
     {
         $request->validate([
             "name" => "required|min:3|max:50",
-            "email" => "required|min:5|max:50"
+            "email" => "required|min:5|max:50",
+            "position" => "required|min:3|max:50"
         ]);
 
         $user = User::find(Auth::id());
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->position = $request->position;
         $user->update();
 
         return redirect()->route('profile')->with("toast", ["icon" => "success", "title" => "User Information Updated."]);

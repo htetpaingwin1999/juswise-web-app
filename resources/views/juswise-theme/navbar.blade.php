@@ -23,6 +23,7 @@
                 {{-- <li class="nav-item  mx-2">
                     <a class="nav-link text-secondary " href="jusX-blog.html" target="_blank">Blog</a>
                 </li> --}}
+
                 <li class="nav-item  mx-2">
                     <a class="nav-link empower text-light" href="{{ route('donate') }}">Empower Us</a>
                 </li>
