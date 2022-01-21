@@ -40,8 +40,6 @@
             {{-- Category Manager --}}
             <x-menu-title title="Category Manager" icon="fas fa-layer-group"></x-menu-title>
             <x-menu-item name="Case Category" icon="fas fa-stream" link="{{ route('category.index') }}"></x-menu-item>
-            <x-menu-item name="Article Category" icon="fas fa-stream" link="{{ route('article-category.index') }}">
-            </x-menu-item>
             <hr class="text-primary">
 
             {{-- Case Manager --}}
@@ -51,12 +49,7 @@
             <x-menu-item name="Case List" icon="fas fa-table" link="{{ route('problem.index') }}"></x-menu-item>
             <hr class="text-primary">
 
-            {{-- Article Manager --}}
-            <x-menu-title title="Article Manager" icon="far fa-newspaper"></x-menu-title>
-            <x-menu-item name="Create Article" icon="fas fa-plus-circle" link="{{ route('article.create') }}">
-            </x-menu-item>
-            <x-menu-item name="Article Lists" icon="far fa-list-alt" link="{{ route('article.index') }}"></x-menu-item>
-            <hr class="text-primary">
+
 
             {{-- Account Setting --}}
             <x-menu-title title="Account Setting" icon="fas fa-user-cog"></x-menu-title>

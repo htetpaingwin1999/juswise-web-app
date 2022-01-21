@@ -36,8 +36,6 @@ Route::middleware(['auth', 'isBanned'])->group(function () {
         Route::prefix('dashboard')->group(function () {
             Route::resource('category', 'CategoryController');
             Route::resource('problem', 'ProblemController');
-            Route::resource('article', 'ArticleController');
-            Route::resource('article-category', 'ArticleCategoryController');
         });
 
         // User Manager
